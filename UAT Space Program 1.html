@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Ryan Yoo-->
+<html>
+    <head>
+        <script>
+            //alert("This is a test of the alert function")
+        </script>
+        <title> UAT Space Program </title>
+        <style>
+            body{
+                background-color: lightcoral;
+                text-decoration-color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="UATspaceLogo-1.jpg">
+
+        <h1>UAT SPACE PROGRAM</h1>
+        <p>hello, this is an experiment.</p>
+        <br>
+        <br>
+        <button onclick = playCraps()>
+            Play Craps
+        </button>
+        <button>
+            Start
+        </button>
+        <button>
+            Stop
+        </button>
+        <br>
+        <br>
+        <p id = "Countdown Timer"> Initiating Countdown Sequence</p>
+        <script>
+            var currTime = 50;
+            for (i = 10; i > 0; i--)
+            {
+                setTimeout(function()
+                {
+                    currTime = currTime - 5;
+                    alert("The time is "+currTime);
+                    if (currTime == 0)
+                    {
+                        document.getElementById("Countdown Timer").innerHTML = "Blastoff!";
+                    }
+                    else if ( currTime <= 25)
+                    {
+                        document.getElementById("Countdown Timer").innerHTML = "Warning less than 1/2 way to launch, time left = "+currTime;
+                    }
+                    else
+                    {
+                    document.getElementById("Countdown Timer").innerHTML = currTime;
+                    }
+                }, 5000);
+                
+            }
+            
+            document.write("Simple Craps");
+            document.write("<br/>");
+
+            playCraps();
+        </script>
+        
+    </body>
+
+</html>
